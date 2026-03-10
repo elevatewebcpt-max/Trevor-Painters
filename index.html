@@ -1,699 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Waterproofing & Painters Cape Town</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #0f172a;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1150px, 92%);
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid #e5e7eb;
-      backdrop-filter: blur(10px);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .logo-box {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      background: #0f172a;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-    }
-
-    .brand small {
-      display: block;
-      color: #64748b;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .brand strong {
-      font-size: 18px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 22px;
-      align-items: center;
-    }
-
-    nav a:hover {
-      color: #475569;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .btn-dark {
-      background: #0f172a;
-      color: white;
-    }
-
-    .btn-dark:hover {
-      transform: translateY(-1px);
-      opacity: 0.95;
-    }
-
-    .btn-light {
-      background: white;
-      color: #0f172a;
-    }
-
-    .btn-light:hover {
-      transform: translateY(-1px);
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #020617, #1e293b, #334155);
-      color: white;
-      padding: 90px 0;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 14px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.08);
-      border-radius: 999px;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 4.5rem);
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #e2e8f0;
-      max-width: 650px;
-      margin-bottom: 28px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 34px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .stat {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 18px;
-      border-radius: 18px;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 26px;
-      margin-bottom: 4px;
-    }
-
-    .hero-card-wrap {
-      display: grid;
-      gap: 18px;
-    }
-
-    .glass-card,
-    .white-card,
-    .dark-card {
-      border-radius: 28px;
-      padding: 28px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
-    }
-
-    .glass-card {
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .glass-card h3,
-    .dark-card h3 {
-      color: white;
-      margin-bottom: 12px;
-      font-size: 28px;
-    }
-
-    .glass-card p,
-    .dark-card p {
-      color: #e2e8f0;
-    }
-
-    .mini-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .white-card {
-      background: white;
-      color: #0f172a;
-    }
-
-    .dark-card {
-      background: #0f172a;
-    }
-
-    .label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #94a3b8;
-    }
-
-    section {
-      padding: 85px 0;
-    }
-
-    .section-title {
-      max-width: 760px;
-      margin-bottom: 38px;
-    }
-
-    .section-title span {
-      color: #64748b;
-      font-size: 13px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(2rem, 4vw, 3.3rem);
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-
-    .section-title p {
-      color: #475569;
-      font-size: 18px;
-    }
-
-    .services-grid,
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      border: 1px solid #e5e7eb;
-      background: white;
-      border-radius: 26px;
-      padding: 26px;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.05);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: #475569;
-    }
-
-    .muted-section {
-      background: #f8fafc;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .benefits-box {
-      background: white;
-      border-radius: 28px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(15,23,42,0.07);
-    }
-
-    .benefit {
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 14px 16px;
-      margin-top: 12px;
-      font-weight: 600;
-      color: #334155;
-    }
-
-    .project-image {
-      height: 220px;
-      border-radius: 22px 22px 0 0;
-      background: linear-gradient(135deg, #cbd5e1, #f1f5f9, #94a3b8);
-    }
-
-    .project-card {
-      overflow: hidden;
-      border: 1px solid #e5e7eb;
-      border-radius: 26px;
-      background: white;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.05);
-    }
-
-    .project-content {
-      padding: 24px;
-    }
-
-    .project-tag {
-      color: #64748b;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .contact-section {
-      background: #0f172a;
-      color: white;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 0.95fr;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .contact-section p {
-      color: #cbd5e1;
-    }
-
-    .contact-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 28px;
-    }
-
-    .contact-info-box {
-      padding: 22px;
-      border-radius: 22px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .contact-info-box small {
-      display: block;
-      color: #94a3b8;
-      margin-bottom: 8px;
-    }
-
-    .form-box {
-      background: white;
-      border-radius: 28px;
-      padding: 30px;
-      color: #0f172a;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    }
-
-    .form-box p {
-      color: #475569;
-    }
-
-    form {
-      margin-top: 20px;
-      display: grid;
-      gap: 14px;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 15px 16px;
-      border: 1px solid #cbd5e1;
-      border-radius: 16px;
-      font-size: 15px;
-      outline: none;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: #0f172a;
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    footer {
-      background: #020617;
-      color: #94a3b8;
-      padding: 24px 0;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .why-grid,
-      .contact-grid,
-      .services-grid,
-      .projects-grid,
-      .mini-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats,
-      .contact-cards {
-        grid-template-columns: 1fr;
-      }
-
-      nav ul {
-        display: none;
-      }
-
-      .nav {
-        flex-wrap: wrap;
-      }
-    }
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trevor Painters | Professional Painting Services</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#222;
+line-height:1.6;
+}
+
+header{
+background:#111;
+color:white;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:22px;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:80vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url("https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1500&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+max-width:600px;
+}
+
+.btn{
+background:#ff4d00;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.services{
+padding:80px 40px;
+text-align:center;
+}
+
+.services h2{
+font-size:36px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:#f5f5f5;
+padding:30px;
+border-radius:10px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.about{
+padding:80px 40px;
+background:#fafafa;
+text-align:center;
+}
+
+.about p{
+max-width:800px;
+margin:auto;
+font-size:18px;
+}
+
+.contact{
+padding:80px 40px;
+text-align:center;
+}
+
+.contact h2{
+margin-bottom:20px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <header>
-    <div class="container nav">
-      <a href="#home" class="brand">
-        <div class="logo-box">WP</div>
-        <div>
-          <small>Cape Town</small>
-          <strong>Waterproofing & Painters</strong>
-        </div>
-      </a>
+<header>
 
-      <nav>
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<h1>Trevor Painters</h1>
 
-      <a href="#contact" class="btn btn-dark">Request Quote</a>
-    </div>
-  </header>
+<nav>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Trusted Waterproofing & Painting Solutions</div>
-        <h1>Protect, Restore, and Refresh Your Property the Right Way.</h1>
-        <p>
-          Waterproofing & Painters Cape Town helps property owners prevent damage,
-          improve appearance, and keep buildings looking professional with expert
-          waterproofing and painting services.
-        </p>
+</header>
 
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-light">Get a Free Quote</a>
-          <a href="#services" class="btn" style="border:1px solid rgba(255,255,255,0.2); color:white;">Explore Services</a>
-        </div>
 
-        <div class="stats">
-          <div class="stat">
-            <strong>Fast</strong>
-            <span>Quotes & response</span>
-          </div>
-          <div class="stat">
-            <strong>Clean</strong>
-            <span>Professional finish</span>
-          </div>
-          <div class="stat">
-            <strong>Reliable</strong>
-            <span>Built for trust</span>
-          </div>
-        </div>
-      </div>
+<section class="hero">
 
-      <div class="hero-card-wrap">
-        <div class="glass-card">
-          <div class="label">Brand Positioning</div>
-          <h3>A stronger, more premium image for local property work.</h3>
-          <p>
-            This design fixes the usual weak contractor branding by making the
-            company look more established, trustworthy, and quote-ready from the first screen.
-          </p>
-        </div>
+<h2>Professional Painting Services</h2>
 
-        <div class="mini-grid">
-          <div class="white-card">
-            <div class="label">Lead Focus</div>
-            <h3 style="font-size:24px; color:#0f172a;">More Calls. More WhatsApps. More Quotes.</h3>
-            <p>Built to turn visitors into enquiries instead of just sitting online like a brochure.</p>
-          </div>
+<p>
+High-quality interior and exterior painting for homes and businesses in Cape Town.
+</p>
 
-          <div class="dark-card">
-            <div class="label">Trust Elements</div>
-            <h3 style="font-size:24px;">Professional layout with strong service clarity.</h3>
-            <p>Clear sections, modern structure, and confidence-building messaging tailored for building-related services.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<a class="btn" href="#contact">Request Quote</a>
 
-  <section id="services">
-    <div class="container">
-      <div class="section-title">
-        <span>Services</span>
-        <h2>Built for the jobs property owners actually search for.</h2>
-        <p>
-          The site is structured around clear, high-intent services so customers instantly
-          understand what the company does and can request the right type of help quickly.
-        </p>
-      </div>
+</section>
 
-      <div class="services-grid">
-        <div class="card">
-          <h3>Roof Waterproofing</h3>
-          <p>Stop leaks before they spread. We seal, coat, and protect roofs for long-term performance in Cape Town conditions.</p>
-        </div>
-        <div class="card">
-          <h3>Exterior Painting</h3>
-          <p>Clean, durable exterior finishes that improve curb appeal and protect building surfaces from weather damage.</p>
-        </div>
-        <div class="card">
-          <h3>Interior Painting</h3>
-          <p>Neat, professional interior painting for homes, offices, and rental properties with minimal disruption.</p>
-        </div>
-        <div class="card">
-          <h3>Damp & Crack Repairs</h3>
-          <p>Surface prep, patching, crack sealing, and moisture-related repairs done before coating or painting begins.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="muted-section" id="why-us">
-    <div class="container why-grid">
-      <div>
-        <div class="section-title">
-          <span>Why this design works</span>
-          <h2>Not just prettier. Better for conversions.</h2>
-          <p>
-            Most contractor sites look outdated, generic, or unfinished.
-            This concept upgrades the brand visually while also making it easier
-            for customers to trust the business and take action immediately.
-          </p>
-        </div>
-      </div>
+<section id="services" class="services">
 
-      <div class="benefits-box">
-        <h3>What this site improves</h3>
-        <div class="benefit">Fast quote turnaround</div>
-        <div class="benefit">WhatsApp-first contact flow</div>
-        <div class="benefit">Clear service breakdown</div>
-        <div class="benefit">Professional trust-focused branding</div>
-        <div class="benefit">Mobile-first layout for local leads</div>
-        <div class="benefit">Strong CTA placement for conversions</div>
-      </div>
-    </div>
-  </section>
+<h2>Our Services</h2>
 
-  <section id="projects">
-    <div class="container">
-      <div class="section-title">
-        <span>Featured Work</span>
-        <h2>Show the work. Build the trust.</h2>
-        <p>
-          Strong contractor branding is not only about colors and layout.
-          It also comes from showing the type of work customers want proof of before requesting a quote.
-        </p>
-      </div>
+<div class="grid">
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image"></div>
-          <div class="project-content">
-            <div class="project-tag">Waterproofing</div>
-            <h3>Residential Roof Reseal</h3>
-            <p>Leak-prone tiled roof restored with waterproof membrane and protective coating.</p>
-          </div>
-        </div>
+<div class="card">
+<h3>Interior Painting</h3>
+<p>Clean, professional interior painting that transforms your home.</p>
+</div>
 
-        <div class="project-card">
-          <div class="project-image"></div>
-          <div class="project-content">
-            <div class="project-tag">Exterior Painting</div>
-            <h3>Apartment Block Refresh</h3>
-            <p>Full exterior repaint to modernize appearance and improve weather resistance.</p>
-          </div>
-        </div>
+<div class="card">
+<h3>Exterior Painting</h3>
+<p>Durable exterior painting that protects and improves curb appeal.</p>
+</div>
 
-        <div class="project-card">
-          <div class="project-image"></div>
-          <div class="project-content">
-            <div class="project-tag">Painting</div>
-            <h3>Interior Office Upgrade</h3>
-            <p>Professional repaint for a cleaner, brighter, more client-ready workspace.</p>
-          </div>
-        </div>
+<div class="card">
+<h3>Roof Painting</h3>
+<p>Protect and restore your roof with professional coatings.</p>
+</div>
 
-        <div class="project-card">
-          <div class="project-image"></div>
-          <div class="project-content">
-            <div class="project-tag">Damp Repairs</div>
-            <h3>Moisture Damage Repair</h3>
-            <p>Repair and prep work completed before repainting to restore damaged walls properly.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="card">
+<h3>Commercial Painting</h3>
+<p>Professional painting services for offices and buildings.</p>
+</div>
 
-  <section class="contact-section" id="contact">
-    <div class="container contact-grid">
-      <div>
-        <div class="section-title">
-          <span style="color:#94a3b8;">Contact</span>
-          <h2 style="color:white;">Ready to make the business look stronger online?</h2>
-          <p>
-            This layout was built to position Waterproofing & Painters Cape Town as a more premium,
-            reliable, and enquiry-ready company.
-          </p>
-        </div>
+</div>
 
-        <div class="contact-cards">
-          <div class="contact-info-box">
-            <small>Email</small>
-            <strong>info@yourcompany.co.za</strong>
-          </div>
-          <div class="contact-info-box">
-            <small>Phone / WhatsApp</small>
-            <strong>+27 00 000 0000</strong>
-          </div>
-        </div>
-      </div>
+</section>
 
-      <div class="form-box">
-        <h3>Request a Quote</h3>
-        <p>Keep the form simple so more people actually complete it.</p>
 
-        <form>
-          <input type="text" placeholder="Full Name" />
-          <input type="text" placeholder="Phone Number" />
-          <input type="email" placeholder="Email Address" />
-          <select>
-            <option>Select a service</option>
-            <option>Roof Waterproofing</option>
-            <option>Exterior Painting</option>
-            <option>Interior Painting</option>
-            <option>Damp & Crack Repairs</option>
-          </select>
-          <textarea placeholder="Tell us about your project"></textarea>
-          <button type="button" class="btn btn-dark" style="border:none; cursor:pointer;">Send Enquiry</button>
-        </form>
-      </div>
-    </div>
-  </section>
+<section id="about" class="about">
 
-  <footer>
-    <div class="container">
-      Waterproofing & Painters Cape Town © 2026. Built for stronger branding and better lead generation.
-    </div>
-  </footer>
+<h2>About Trevor Painters</h2>
+
+<p>
+Trevor Painters provides reliable and professional painting services in Cape Town. 
+Our team focuses on quality workmanship, attention to detail, and customer satisfaction.
+</p>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+<h2>Get a Quote</h2>
+
+<p>Email: trevor@example.com</p>
+<p>Phone: +27 00 000 0000</p>
+
+<br>
+
+<a class="btn" href="#">Contact Us</a>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Trevor Painters | Cape Town</p>
+
+</footer>
+
 
 </body>
 </html>

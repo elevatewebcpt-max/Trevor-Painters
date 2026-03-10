@@ -1,1010 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trevor Painters | Professional Painting Services</title>
-  <meta name="description" content="Trevor Painters offers professional interior, exterior, roof, and commercial painting services with clean finishes and reliable workmanship." />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-soft: #111827;
-      --card: rgba(255,255,255,0.08);
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --white: #ffffff;
-      --primary: #f59e0b;
-      --primary-dark: #d97706;
-      --accent: #22c55e;
-      --border: rgba(255,255,255,0.12);
-      --shadow: 0 20px 50px rgba(0,0,0,0.25);
-      --radius: 22px;
-      --max-width: 1200px;
-    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trevor Painters | Professional Painters Cape Town</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#222;
+line-height:1.6;
+}
+
+header{
+background:#111;
+color:white;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:22px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.hero{
+height:85vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+max-width:650px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#ff4d00;
+color:white;
+padding:15px 35px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.services{
+padding:80px 40px;
+text-align:center;
+}
+
+.services h2{
+font-size:36px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:#f5f5f5;
+padding:30px;
+border-radius:10px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.projects{
+padding:80px 40px;
+background:#fafafa;
+text-align:center;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
+}
+
+.testimonials{
+padding:80px 40px;
+text-align:center;
+}
+
+.review{
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+font-style:italic;
+}
+
+.contact{
+padding:80px 40px;
+background:#111;
+color:white;
+text-align:center;
+}
+
+footer{
+background:#000;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* WhatsApp floating button */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+</style>
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(245,158,11,0.15), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(34,197,94,0.12), transparent 20%),
-        linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 24px;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: 0.25s ease;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #111827;
-      box-shadow: 0 10px 25px rgba(245,158,11,0.25);
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      color: var(--white);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--white);
-      border: 1px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.08);
-      transform: translateY(-2px);
-    }
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 3vw, 3rem);
-      line-height: 1.15;
-      margin-bottom: 14px;
-      color: var(--white);
-    }
-
-    .section-subtitle {
-      color: var(--muted);
-      max-width: 750px;
-      margin-bottom: 40px;
-    }
-
-    /* NAV */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(14px);
-      background: rgba(10, 15, 28, 0.7);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 78px;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 1.15rem;
-      font-weight: 900;
-      letter-spacing: 0.5px;
-      color: var(--white);
-    }
-
-    .logo span {
-      color: var(--primary);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text);
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .menu-btn {
-      display: none;
-      background: transparent;
-      color: white;
-      border: 1px solid var(--border);
-      padding: 10px 14px;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 90px 0 60px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.6rem, 5vw, 5rem);
-      line-height: 1.05;
-      color: var(--white);
-      margin-bottom: 18px;
-      font-weight: 900;
-    }
-
-    .hero h1 span {
-      color: var(--primary);
-    }
-
-    .hero p {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 650px;
-      margin-bottom: 28px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 30px;
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .stat {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .stat h3 {
-      font-size: 1.7rem;
-      color: var(--white);
-      margin-bottom: 6px;
-    }
-
-    .stat p {
-      margin: 0;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .hero-card {
-      position: relative;
-      min-height: 560px;
-      border-radius: 32px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-      background:
-        linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.15)),
-        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
-    }
-
-    .hero-card-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 30px;
-      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-    }
-
-    .hero-card-content h3 {
-      color: white;
-      font-size: 1.6rem;
-      margin-bottom: 8px;
-    }
-
-    .hero-card-content p {
-      color: #d1d5db;
-      margin-bottom: 18px;
-    }
-
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 10px;
-    }
-
-    .trust-pill {
-      padding: 10px 14px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.07);
-      color: var(--text);
-      font-size: 0.9rem;
-    }
-
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 26px;
-      transition: 0.25s ease;
-      box-shadow: var(--shadow);
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(245,158,11,0.45);
-    }
-
-    .service-icon {
-      font-size: 2rem;
-      margin-bottom: 16px;
-    }
-
-    .service-card h3 {
-      color: var(--white);
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-      align-items: center;
-    }
-
-    .about-image {
-      min-height: 460px;
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      background:
-        linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0.1)),
-        url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
-    }
-
-    .about-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: var(--shadow);
-    }
-
-    .about-list {
-      display: grid;
-      gap: 14px;
-      margin: 24px 0;
-    }
-
-    .about-list div {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      color: var(--text);
-    }
-
-    .about-list span {
-      color: var(--accent);
-      font-weight: bold;
-      margin-top: 2px;
-    }
-
-    /* GALLERY */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .gallery-item {
-      border-radius: 22px;
-      overflow: hidden;
-      min-height: 260px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      position: relative;
-    }
-
-    .gallery-item::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
-    }
-
-    .g1 { background: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat; }
-    .g2 { background: url("https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat; }
-    .g3 { background: url("https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat; }
-
-    /* PROCESS */
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .process-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .step {
-      display: inline-flex;
-      width: 42px;
-      height: 42px;
-      align-items: center;
-      justify-content: center;
-      background: var(--primary);
-      color: #111827;
-      border-radius: 50%;
-      font-weight: 900;
-      margin-bottom: 16px;
-    }
-
-    .process-card h3 {
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-
-    .process-card p {
-      color: var(--muted);
-    }
-
-    /* REVIEWS */
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .review-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-    }
-
-    .stars {
-      color: var(--primary);
-      font-size: 1.1rem;
-      margin-bottom: 14px;
-    }
-
-    .review-card p {
-      color: var(--text);
-      margin-bottom: 18px;
-    }
-
-    .review-card h4 {
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-
-    .review-card span {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    /* CTA */
-    .cta-box {
-      background:
-        linear-gradient(135deg, rgba(245,158,11,0.18), rgba(34,197,94,0.15)),
-        rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 32px;
-      padding: 40px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-
-    .cta-box h2 {
-      color: var(--white);
-      font-size: clamp(2rem, 3vw, 3rem);
-      margin-bottom: 14px;
-    }
-
-    .cta-box p {
-      color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto 24px;
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .contact-card,
-    .form-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-items {
-      display: grid;
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .contact-item h4 {
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-
-    .contact-item p,
-    .contact-item a {
-      color: var(--muted);
-    }
-
-    .form-grid {
-      display: grid;
-      gap: 14px;
-    }
-
-    .form-grid input,
-    .form-grid textarea {
-      width: 100%;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      color: var(--white);
-      padding: 14px 16px;
-      border-radius: 16px;
-      outline: none;
-      font-size: 1rem;
-    }
-
-    .form-grid input::placeholder,
-    .form-grid textarea::placeholder {
-      color: #94a3b8;
-    }
-
-    .form-grid textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    /* FOOTER */
-    .footer {
-      padding: 30px 0 50px;
-      color: var(--muted);
-    }
-
-    .footer-wrap {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 26px;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: #25D366;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.7rem;
-      box-shadow: 0 16px 35px rgba(37,211,102,0.35);
-      z-index: 1001;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.06);
-    }
-
-    /* ANIMATIONS */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: 0.7s ease;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1080px) {
-      .hero-grid,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid,
-      .process-grid,
-      .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        min-height: 420px;
-      }
-    }
-
-    @media (max-width: 780px) {
-      .nav-links {
-        position: absolute;
-        top: 79px;
-        right: 4%;
-        width: 92%;
-        background: #0b1220;
-        border: 1px solid var(--border);
-        border-radius: 22px;
-        padding: 18px;
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: inline-block;
-      }
-
-      .hero-stats,
-      .services-grid,
-      .process-grid,
-      .reviews-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 60px;
-      }
-
-      .section {
-        padding: 72px 0;
-      }
-
-      .cta-box,
-      .about-card,
-      .contact-card,
-      .form-card {
-        padding: 24px;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <nav class="nav">
-    <div class="container nav-wrap">
-      <a href="#home" class="logo">Trevor <span>Painters</span></a>
+<header>
 
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#gallery">Work</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-primary" href="https://wa.me/27730000000?text=Hi%20Trevor%20Painters,%20I%20would%20like%20a%20quote.">Get Quote</a>
-      </div>
+<h1>Trevor Painters</h1>
 
-      <button class="menu-btn" id="menuBtn">Menu</button>
-    </div>
-  </nav>
+<nav>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div class="reveal">
-        <div class="hero-badge">Professional Painting Services • Fast Quotes • Clean Finishes</div>
-        <h1>Paint Your Property With <span>Confidence</span></h1>
-        <p>
-          We help homeowners, landlords, and businesses refresh their spaces with quality interior,
-          exterior, roof, and commercial painting. Clean work. Reliable service. Results that last.
-        </p>
+</header>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/27730000000?text=Hi%20Trevor%20Painters,%20I%20would%20like%20a%20quote.">Get a Free Quote</a>
-          <a class="btn btn-secondary" href="#services">View Services</a>
-        </div>
+<section class="hero">
 
-        <div class="trust-row">
-          <div class="trust-pill">Interior & Exterior Painting</div>
-          <div class="trust-pill">Residential & Commercial</div>
-          <div class="trust-pill">Cape Town & Surrounds</div>
-        </div>
+<h2>Professional Painters in Cape Town</h2>
 
-        <div class="hero-stats">
-          <div class="stat">
-            <h3>Fast</h3>
-            <p>Quick response times for quotes and bookings.</p>
-          </div>
-          <div class="stat">
-            <h3>Clean</h3>
-            <p>Neat preparation, professional finish, proper cleanup.</p>
-          </div>
-          <div class="stat">
-            <h3>Reliable</h3>
-            <p>Clear communication and workmanship you can trust.</p>
-          </div>
-        </div>
-      </div>
+<p>
+Interior, exterior and roof painting done properly. Clean finishes, reliable team and affordable quotes.
+</p>
 
-      <div class="hero-card reveal">
-        <div class="hero-card-content">
-          <h3>Professional finishes that uplift your property</h3>
-          <p>From walls and ceilings to roofs and exterior surfaces, we bring fresh life to your space.</p>
-          <a class="btn btn-primary" href="#contact">Book an Estimate</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<a class="btn" href="#contact">Request Free Quote</a>
 
-  <section class="section" id="services">
-    <div class="container">
-      <h2 class="section-title reveal">Our Painting Services</h2>
-      <p class="section-subtitle reveal">
-        Whether you need a home refresh, roof coating, or a professional repaint for your business,
-        we provide dependable service and quality workmanship.
-      </p>
+</section>
 
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-icon">🎨</div>
-          <h3>Interior Painting</h3>
-          <p>Walls, ceilings, trim, doors, and complete room repaints with smooth, clean finishes.</p>
-        </div>
+<section id="services" class="services">
 
-        <div class="service-card reveal">
-          <div class="service-icon">🏠</div>
-          <h3>Exterior Painting</h3>
-          <p>Boost curb appeal and protect your property with durable exterior coatings.</p>
-        </div>
+<h2>Our Painting Services</h2>
 
-        <div class="service-card reveal">
-          <div class="service-icon">🛠️</div>
-          <h3>Roof Painting</h3>
-          <p>Roof surface preparation and painting to improve appearance and extend lifespan.</p>
-        </div>
+<div class="grid">
 
-        <div class="service-card reveal">
-          <div class="service-icon">🏢</div>
-          <h3>Commercial Painting</h3>
-          <p>Shops, offices, complexes, and business spaces painted with minimal disruption.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="card">
+<h3>Interior Painting</h3>
+<p>Clean professional painting that refreshes your home.</p>
+</div>
 
-  <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="about-image reveal"></div>
+<div class="card">
+<h3>Exterior Painting</h3>
+<p>Weather resistant exterior painting for homes and buildings.</p>
+</div>
 
-      <div class="about-card reveal">
-        <h2 class="section-title">Why Clients Choose Trevor Painters</h2>
-        <p class="section-subtitle" style="margin-bottom: 10px;">
-          We focus on quality, communication, and giving every project the attention it deserves.
-        </p>
+<div class="card">
+<h3>Roof Painting</h3>
+<p>Protect and restore roofs with long lasting coatings.</p>
+</div>
 
-        <div class="about-list">
-          <div><span>✓</span><p>Thorough preparation before painting starts</p></div>
-          <div><span>✓</span><p>Attention to detail for a clean, professional finish</p></div>
-          <div><span>✓</span><p>Respect for your home, business, and schedule</p></div>
-          <div><span>✓</span><p>Friendly service and straightforward communication</p></div>
-        </div>
+<div class="card">
+<h3>Commercial Painting</h3>
+<p>Professional painting for offices and commercial properties.</p>
+</div>
 
-        <a class="btn btn-primary" href="https://wa.me/27730000000?text=Hi%20Trevor%20Painters,%20I%20want%20to%20know%20more%20about%20your%20services.">Chat on WhatsApp</a>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <section class="section" id="gallery">
-    <div class="container">
-      <h2 class="section-title reveal">Recent Work Inspiration</h2>
-      <p class="section-subtitle reveal">
-        A strong paint job changes the feel of a space instantly. Here’s the kind of clean, upgraded look clients want.
-      </p>
+</section>
 
-      <div class="gallery-grid">
-        <div class="gallery-item g1 reveal"></div>
-        <div class="gallery-item g2 reveal"></div>
-        <div class="gallery-item g3 reveal"></div>
-      </div>
-    </div>
-  </section>
+<section id="projects" class="projects">
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title reveal">Our Simple Process</h2>
-      <p class="section-subtitle reveal">
-        No confusion. No mess. Just a clear process from quote to final handover.
-      </p>
+<h2>Recent Projects</h2>
 
-      <div class="process-grid">
-        <div class="process-card reveal">
-          <div class="step">1</div>
-          <h3>Contact Us</h3>
-          <p>Send us a message or call with your painting requirements and location.</p>
-        </div>
+<div class="gallery">
 
-        <div class="process-card reveal">
-          <div class="step">2</div>
-          <h3>Get a Quote</h3>
-          <p>We assess the work needed and provide a clear, straightforward estimate.</p>
-        </div>
+<img src="https://images.unsplash.com/photo-1597095129712-1a3c6b7d6f63?auto=format&fit=crop&w=900&q=80">
 
-        <div class="process-card reveal">
-          <div class="step">3</div>
-          <h3>We Get to Work</h3>
-          <p>Preparation, painting, and finishing are handled with care and professionalism.</p>
-        </div>
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80">
 
-        <div class="process-card reveal">
-          <div class="step">4</div>
-          <h3>Enjoy the Result</h3>
-          <p>You get a refreshed, cleaner-looking property with a quality finish.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80">
 
-  <section class="section" id="reviews">
-    <div class="container">
-      <h2 class="section-title reveal">What Clients Love</h2>
-      <p class="section-subtitle reveal">
-        A good painting company is not just about paint. It’s about trust, neatness, and showing up properly.
-      </p>
+</div>
 
-      <div class="reviews-grid">
-        <div class="review-card reveal">
-          <div class="stars">★★★★★</div>
-          <p>
-            The team was professional, neat, and easy to deal with. The final result made the whole house feel brand new.
-          </p>
-          <h4>Sarah M.</h4>
-          <span>Homeowner</span>
-        </div>
+</section>
 
-        <div class="review-card reveal">
-          <div class="stars">★★★★★</div>
-          <p>
-            Great communication, fair pricing, and quality work. They kept the site clean and finished on time.
-          </p>
-          <h4>David R.</h4>
-          <span>Business Owner</span>
-        </div>
+<section id="reviews" class="testimonials">
 
-        <div class="review-card reveal">
-          <div class="stars">★★★★★</div>
-          <p>
-            We needed exterior painting done properly and the finish came out excellent. Would definitely recommend them.
-          </p>
-          <h4>Naledi T.</h4>
-          <span>Property Manager</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<h2>Customer Reviews</h2>
 
-  <section class="section">
-    <div class="container">
-      <div class="cta-box reveal">
-        <h2>Ready To Refresh Your Property?</h2>
-        <p>
-          Let’s give your home, office, or building a cleaner, sharper, more professional look.
-          Contact us today for a fast quote.
-        </p>
-        <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://wa.me/27730000000?text=Hi%20Trevor%20Painters,%20I%20would%20like%20a%20free%20quote.">Get My Quote</a>
-          <a class="btn btn-secondary" href="#contact">Contact Details</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="review">
+"Trevor and his team painted our entire house and the results were amazing. Highly recommended."
+</div>
 
-  <section class="section" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-card reveal">
-        <h2 class="section-title">Contact Us</h2>
-        <p class="section-subtitle" style="margin-bottom: 0;">
-          Reach out for quotes, bookings, or questions about your next painting project.
-        </p>
+<div class="review">
+"Professional, reliable and very clean work. Will definitely use again."
+</div>
 
-        <div class="contact-items">
-          <div class="contact-item">
-            <h4>Phone</h4>
-            <p><a href="tel:+27730000000">+27 73 000 0000</a></p>
-          </div>
+</section>
 
-          <div class="contact-item">
-            <h4>WhatsApp</h4>
-            <p><a href="https://wa.me/27730000000?text=Hi%20Trevor%20Painters,%20I%20need%20a%20quote.">Message us directly</a></p>
-          </div>
+<section id="contact" class="contact">
 
-          <div class="contact-item">
-            <h4>Email</h4>
-            <p><a href="mailto:info@trevorpainters.co.za">info@trevorpainters.co.za</a></p>
-          </div>
+<h2>Request a Quote</h2>
 
-          <div class="contact-item">
-            <h4>Service Areas</h4>
-            <p>Cape Town, Northern Suburbs, Southern Suburbs, and nearby areas</p>
-          </div>
-        </div>
-      </div>
+<p>Email: trevor@example.com</p>
+<p>Phone: +27 00 000 0000</p>
 
-      <div class="form-card reveal">
-        <h2 class="section-title" style="font-size:2rem;">Request a Quote</h2>
-        <form class="form-grid" onsubmit="sendToWhatsApp(event)">
-          <input type="text" id="name" placeholder="Your name" required />
-          <input type="tel" id="phone" placeholder="Your phone number" required />
-          <input type="text" id="location" placeholder="Your area / suburb" required />
-          <textarea id="message" placeholder="Tell us what you need painted..." required></textarea>
-          <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
-        </form>
-      </div>
-    </div>
-  </section>
+<br>
 
-  <footer class="footer">
-    <div class="container footer-wrap">
-      <p>© <span id="year"></span> Trevor Painters. All rights reserved.</p>
-      <p>Built for speed, trust, and conversions.</p>
-    </div>
-  </footer>
+<a class="btn" href="#">Send Enquiry</a>
 
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/27730000000?text=Hi%20Trevor%20Painters,%20I%20would%20like%20a%20quote."
-    aria-label="WhatsApp Trevor Painters"
-    title="Chat on WhatsApp"
-  >
-    ✆
-  </a>
+</section>
 
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+<footer>
 
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
+<p>© 2026 Trevor Painters | Cape Town</p>
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("show");
-      });
-    });
+</footer>
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+<a class="whatsapp" href="https://wa.me/27000000000" target="_blank">
+WhatsApp Us
+</a>
 
-    function sendToWhatsApp(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const location = document.getElementById("location").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      const text = `Hi Trevor Painters,%0A%0AMy name is ${encodeURIComponent(name)}.%0APhone: ${encodeURIComponent(phone)}%0ALocation: ${encodeURIComponent(location)}%0A%0AI need help with: ${encodeURIComponent(message)}`;
-
-      window.open(`https://wa.me/27730000000?text=${text}`, "_blank");
-    }
-
-    const reveals = document.querySelectorAll(".reveal");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    }, { threshold: 0.15 });
-
-    reveals.forEach(item => observer.observe(item));
-  </script>
 </body>
 </html>
